@@ -1,6 +1,6 @@
 # TyphoonRiskChina
 
-[中文说明](TyphoonRiskChina/README.zh-CN.md)
+[Chinese documentation](TyphoonRiskChina/README.zh-CN.md)
 
 TyphoonRiskChina is a local web application for forecast-driven typhoon wind-field downscaling, interactive hazard mapping, and loss assessment in coastal China. The Vue interface and FastAPI calculation service run on the same computer; scientific inputs and generated results are not sent to a remote calculation server.
 
@@ -87,8 +87,8 @@ runtime/downscaling/models/direct_unet_model.h5
 runtime/downscaling/scalers/scaler_x.save
 runtime/downscaling/scalers/scaler_y.save
 runtime/cases/<CASE>/FNL/006.nc ... 168.nc
-runtime/exposure/00000 沿海省份风险暴露/*.parquet
-runtime/exposure/00000 沿海省份网格/*.parquet
+runtime/exposure/<exposure-data-directory>/*.parquet
+runtime/exposure/<grid-data-directory>/*.parquet
 ```
 
 Assets may be stored outside the repository. Copy `config.local.json.example` to `config.local.json`, edit the paths, and do not commit that local file. This JSON file is read by `start_windows.bat`; a manual Uvicorn or Vite development launch must instead set the corresponding `TYPHOON_*` environment variables shown in `.env.example`.
@@ -155,15 +155,15 @@ runtime/
 ├─ cases/
 │  └─ Bavi_ID2609/
 │     ├─ config.yml
-│     ├─ 工作路径.xlsx
+│     ├─ track.xlsx
 │     └─ FNL/006.nc ... 168.nc
 ├─ downscaling/
 │  ├─ models/direct_unet_model.h5
 │  └─ scalers/{scaler_x.save,scaler_y.save}
 └─ exposure/
-   ├─ 00000 沿海省份风险暴露/
+   ├─ <exposure-data-directory>/
    │  └─ {fujian,guangdong,hainan,jiangsu,zhejiang}.parquet
-   └─ 00000 沿海省份网格/
+   └─ <grid-data-directory>/
       └─ one <province>_*.parquet file per province
 ```
 
