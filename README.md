@@ -1,7 +1,5 @@
 # TyphoonRiskChina
 
-[Chinese documentation](TyphoonRiskChina/README.zh-CN.md)
-
 TyphoonRiskChina is a local web application for forecast-driven typhoon wind-field downscaling, interactive hazard mapping, and loss assessment in coastal China. The Vue interface and FastAPI calculation service run on the same computer; scientific inputs and generated results are not sent to a remote calculation server.
 
 > This repository is designed to be cloned and run locally. It is not configured for GitHub Pages: the current asset paths and history-based routes are intended for the local root URL, and Pages cannot run the Python/TensorFlow calculation API.
