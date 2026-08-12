@@ -169,7 +169,7 @@ For a case outside `runtime/cases`, copy `data/approved_wind_sources.example.jso
 
 ### Illustrative examples data source
 
-The datasets used for the Illustrative examples are available from Science Data Bank: [https://doi.org/10.57760/sciencedb.46025](https://doi.org/10.57760/sciencedb.46025). Please consult the dataset record for provenance, access conditions, and citation requirements before reuse.
+The datasets used for the Illustrative examples are available from Science Data Bank: (https://www.scidb.cn/anonymous/eklKQmJt). Please consult the dataset record for provenance, access conditions, and citation requirements before reuse.
 
 ## Processing chain
 
